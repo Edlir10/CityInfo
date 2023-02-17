@@ -21,8 +21,6 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IMailService, LocalMailService>();
 
-builder.Services.AddSingleton<CitiesDataStore>();
-
 
 builder.Services.AddDbContext<CityInfoContext>(
     dbContextOptions => dbContextOptions.UseSqlite(
